@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My World</title>
+  <style>
+   
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #0f0d0d;
+      color: #f5f5f5;}
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 30px;}
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background-color: #1e1e1e;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+    th,td {
+      border: 1px solid #2e2e2e;
+      padding: 12px;
+      text-align: right;
+      font-size: 15px;}
+    th {
+      background-color: #2c2c2c;
+      color: #ffffff;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #252525;}
+
+    button{
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease-in-out;}
+ .update-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;}
+   .delete-btn {
+      background-color: #e74c3c;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px; }
+          .fab {
+        position: fixed; bottom: 25px; right: 25px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #2ecc71;
+      color: white;
+      font-size: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      z-index: 1000;
+      transition: transform 0.3s;
+    }
+
+    .fab:hover {
+      transform: scale(1.1) rotate(90deg);}
+
+    .modal {
+      display: none;
+      position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease; }
+
+    .modal-content {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+      animation: slideIn 0.3s ease;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+      background-color: #2c2c2c;
+      color: #fff;
+      font-size: 15px;
+      resize: vertical;
+      margin-bottom: 10px; }
+
+    .modal-content button {
+      background-color: #2ecc71;
+  color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .close-btn {
+      float: left;
+      font-size: 20px;
+      cursor: pointer;
+      color: #ccc; }
+
+    .close-btn:hover {
+   color: #fff;}
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(20px); opacity: 0; }
+   to { transform: translateY(0); opacity: 1; }
+    }
+    body {
+      background-image: url('c.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: rgba(30, 30, 30, 0.1); 
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+
+th, td {
+  border: 1px solid #2e2e2e;
+  padding: 12px;
+  text-align: right;
+  font-size: 15px;
+  background-color: rgba(30, 30, 30, 0.1); 
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(37, 37, 37, 0.1);  
+}
+
+    }
+
+    
+
+
+
+
+button {
+  cursor: pointer;
+  border: none;
+  transition: transform 0.2s ease, background-color 0.3s ease; 
+}
+button:hover {
+  transform: scale(1.1);  
+  background-color: #2980b9;  
+}
+.update-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.update-btn:hover {
+  background-color: #2980b9; 
+  transform: scale(1.1);  
+}
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b; 
+  transform: scale(1.1); 
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  animation: colorChange 5s infinite alternate; 
+}
+
+
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #0f0d0d;
+  color: #f5f5f5;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;}
+.animated-text span {
+  display: inline-block;
+  animation: colorChange 2s infinite alternate;
+}
+.animated-text span:nth-child(1) {animation-delay: 0s;}
+.animated-text span:nth-child(2) {
+  animation-delay: 0.1s;}
+
+.animated-text span:nth-child(3) {animation-delay: 0.2s;}
+.animated-text span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.animated-text span:nth-child(5) {
+  animation-delay: 0.4s;}
+.animated-text span:nth-child(6) { animation-delay: 0.5s;}
+.animated-text span:nth-child(7) {
+  animation-delay: 0.6s;}
+.animated-text span:nth-child(8) {
+  animation-delay: 0.7s;}
+@keyframes colorChange {
+  0% { color: #9b2802; } 
+  25% { color: #f39c12; } 
+  50% { color: #04652d; } 
+  75% { color: #03436d; } 
+  100% { color: #ff0090; } 
+}
+  </style>
+</head>
+<body>
+  <h1>My World</h1>
+
+  <table id="activities-table">
+  <thead>
+   <tr>
+   <th>#</th>
+  <th>النص</th>
+  <th>الإجراءات</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="fab" onclick="openModal()">+</div>
+
+  <div class="modal" id="modal">
+   <div class="modal-content">
+   <span class="close-btn" onclick="closeModal()">✖</span>
+  <h2>إضافة نشاط جديد</h2>
+  <textarea id="new-activity" rows="4" placeholder="أدخل النص هنا..."></textarea>
+      <br />
+  <button onclick="addActivity()">إضافة</button>
+    </div>
+  </div>
+
+  <script src="s.js">
+       
+  </script>
+</body>
+</html>
+ 
